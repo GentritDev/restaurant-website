@@ -1,50 +1,289 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Website</title>
-    <link rel="stylesheet" href="style.css">
+  <!-- Meta bazë -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gourmet | Restorant Modern në Prishtinë</title>
+  <meta name="description" content="Gourmet - Restorant modern në Prishtinë me kuzhinë sezonalë, ambient elegant dhe rezervime online." />
+  <meta name="keywords" content="restorant, prishtine, kosove, ushqim, meny, rezervime, gourmet" />
+  <meta name="theme-color" content="#8f1d2c" />
+  <!-- OpenGraph (për ndarje në rrjete) -->
+  <meta property="og:title" content="Gourmet | Restorant Modern në Prishtinë" />
+  <meta property="og:description" content="Rezervo online dhe shijo eksperiencën Gourmet në Prishtinë." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Optimizim fontesh -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Restaurant</h1>
-        <nav>
-            <a href="#menu">Menu</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <!-- Header + Navigim -->
+  <header class="header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Faqja kryesore Gourmet">
+        <span class="logo-mark" aria-hidden="true">🍽️</span>
+        <span class="logo-text">Gourmet</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Hap menunë kryesore">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+      <nav class="nav" id="siteNav" aria-label="Navigim kryesor">
+        <ul>
+          <li><a href="#home">Kreu</a></li>
+          <li><a href="#about">Rreth</a></li>
+          <li><a href="#menu">Meny</a></li>
+          <li><a href="#gallery">Galeria</a></li>
+          <li><a href="#reservations" class="btn btn-primary small">Rezervime</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section id="menu" class="section">
-        <h2>Our Menu</h2>
-        <div class="menu-item">
-            <h3>Pizza Margherita</h3>
-            <p>Fresh tomato sauce, mozzarella, and basil.</p>
+  <!-- MAIN -->
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero section" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-heading">Shije moderne në zemër të Prishtinës</h1>
+          <p class="lead">Kuzhinë sezonale, prezantim estetik dhe përvojë e ngrohtë. Rezervo tavolinën tënde sot me një klik.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#reservations">Rezervo Tani</a>
+            <a class="btn btn-outline" href="#menu">Shiko Menynë</a>
+          </div>
         </div>
-        <div class="menu-item">
-            <h3>Chicken Pasta</h3>
-            <p>Creamy sauce with grilled chicken and parmesan.</p>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1600&auto=format&fit=crop"
+               alt="Pjatë me perime të freskëta në stil modern"
+               width="800" height="600" loading="eager">
         </div>
-        <div class="menu-item">
-            <h3>Fresh Salad</h3>
-            <p>Mixed greens with olive oil and lemon.</p>
-        </div>
+      </div>
     </section>
 
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>Welcome to our restaurant — where taste meets simplicity. We prepare fresh food every day using local ingredients.</p>
+    <!-- ABOUT -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="about-title">Rreth Nesh</h2>
+          <p>Te Gourmet kombinim i traditës me kreativitetin modern sjell pjatat tona. Fokus në përbërës sezonalë dhe prezantim të pastër.</p>
+          <p>Ambient i qetë dhe i ngrohtë për takime familjare, biznes, apo momente speciale.</p>
+          <ul class="checks" aria-label="Pikat kryesore">
+            <li>Përbërës sezonalë cilësorë</li>
+            <li>Pije të freskëta pa alkool</li>
+            <li>Opsione vegjetariane & pa gluten</li>
+          </ul>
+        </div>
+        <div class="about-media">
+          <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?q=80&w=1600&auto=format&fit=crop"
+               alt="Ambient i brendshëm restoranti me ndriçim të butë"
+               width="800" height="600" loading="lazy">
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: info@restaurant.com</p>
-        <p>Phone: +383 44 123 456</p>
+    <!-- MENU -->
+    <section id="menu" class="section menu" aria-labelledby="menu-title">
+      <div class="container">
+        <h2 id="menu-title">Meny</h2>
+        <p class="section-lead">Pjatat tona të organizuara sipas kategorive. Përdor filtrat për ta lehtësuar kërkimin.</p>
+
+        <div class="filters" role="tablist" aria-label="Filtrat e menysë">
+          <button class="filter-btn active" data-filter="gjitha" role="tab" aria-selected="true">Të gjitha</button>
+          <button class="filter-btn" data-filter="fillestar" role="tab">Fillestare</button>
+          <button class="filter-btn" data-filter="kryesor" role="tab">Kryesore</button>
+          <button class="filter-btn" data-filter="ëmbëlsira" role="tab">Ëmbëlsira</button>
+          <button class="filter-btn" data-filter="pije" role="tab">Pije</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Artikuj demonstrues -->
+          <article class="menu-card" data-category="fillestar">
+            <div class="menu-card-head">
+              <h3>Bruschetta me Domate</h3>
+              <span class="price">€5.50</span>
+            </div>
+            <p>Bagetë e thekur, domate të freskëta, hudhër, borzilok.</p>
+            <span class="badge">Veg</span>
+          </article>
+
+            <article class="menu-card" data-category="fillestar">
+            <div class="menu-card-head">
+              <h3>Sallatë Ceasar</h3>
+              <span class="price">€6.90</span>
+            </div>
+            <p>Marule romane, salcë ceasar, parmixhan, croutons.</p>
+          </article>
+
+          <article class="menu-card" data-category="kryesor">
+            <div class="menu-card-head">
+              <h3>Risotto me Kërpudha</h3>
+              <span class="price">€10.90</span>
+            </div>
+            <p>Arborio, kërpudha porçini, parmixhan, verë e bardhë (pa alkool në shërbim).</p>
+            <span class="badge">Veg</span>
+          </article>
+
+          <article class="menu-card" data-category="kryesor">
+            <div class="menu-card-head">
+              <h3>Fileto Viçi</h3>
+              <span class="price">€14.50</span>
+            </div>
+            <p>Fileto me salcë piper, pure patate kremoze.</p>
+            <span class="badge badge-hot">Special</span>
+          </article>
+
+          <article class="menu-card" data-category="ëmbëlsira">
+            <div class="menu-card-head">
+              <h3>Tiramisu Klasik</h3>
+              <span class="price">€4.90</span>
+            </div>
+            <p>Mascarpone, biskota savoiardi, espresso, kakao.</p>
+          </article>
+
+          <article class="menu-card" data-category="pije">
+            <div class="menu-card-head">
+              <h3>Limonadë e Freskët</h3>
+              <span class="price">€2.50</span>
+            </div>
+            <p>Limona të shtrydhur, mente, akull.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Our Restaurant. All rights reserved.</p>
-    </footer>
+    <!-- GALLERY -->
+    <section id="gallery" class="section gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title">Galeria</h2>
+        <div class="gallery-grid">
+          <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1600&auto=format&fit=crop"
+               alt="Pjatë e dekoruar në mënyrë artistike" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?q=80&w=1600&auto=format&fit=crop"
+               alt="Sallatë e gjelbër e freskët" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1447078806655-40579c2520d6?q=80&w=1600&auto=format&fit=crop"
+               alt="Ambient i brendshëm me tavolina të rregulluara" loading="lazy">
+          <img src="https://images.pexels.com/photos/5186199/pexels-photo-5186199.jpeg"
+               alt="Pjatë kryesore e servuar në pjatë të bardhë" loading="lazy">
+          <img src="https://images.pexels.com/photos/5836427/pexels-photo-5836427.jpeg"
+               alt="Detaj i dekorit të ushqimit" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=1600&auto=format&fit=crop"
+               alt="Atmosferë e ngrohtë në mbrëmje" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATIONS -->
+    <section id="reservations" class="section reservations" aria-labelledby="reservations-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="reservations-title">Rezervime</h2>
+          <p>Plotëso formën për të dërguar kërkesën e rezervimit. Konfirmimi bëhet përmes kontaktit.</p>
+          <ul class="hours">
+            <li>Orari: 10:00 - 23:00 (çdo ditë)</li>
+            <li>Adresë: Rr. Shembull, Nr. 12, Prishtinë, Kosovë</li>
+            <li>Tel: +383 44 000 000</li>
+          </ul>
+        </div>
+        <form id="reservationForm" class="card form" novalidate aria-describedby="form-note">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Emri dhe Mbiemri</label>
+              <input type="text" id="name" name="name" placeholder="p.sh. Ardit Krasniqi" required>
+              <div class="error" data-for="name"></div>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="p.sh. ardit@example.com" required>
+              <div class="error" data-for="email"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Telefoni</label>
+              <input type="tel" id="phone" name="phone" placeholder="+383 44 123 456" pattern="^\\+?[0-9 ()-]{7,}$" required>
+              <div class="error" data-for="phone"></div>
+            </div>
+            <div class="form-field">
+              <label for="guests">Persona</label>
+              <input type="number" id="guests" name="guests" min="1" max="20" value="2" required>
+              <div class="error" data-for="guests"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="date">Data</label>
+              <input type="date" id="date" name="date" required>
+              <div class="error" data-for="date"></div>
+            </div>
+            <div class="form-field">
+              <label for="time">Ora</label>
+              <input type="time" id="time" name="time" required>
+              <div class="error" data-for="time"></div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Mesazh (opsional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Kërkesa të veçanta, alergji, etj."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Dërgo Rezervimin</button>
+          <p id="form-note" class="form-footnote">Të dhënat nuk dërgohen në server (vetëm demonstrim lokal).</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="contact-title">Kontakt</h2>
+          <p>Na kontakto për bashkëpunime, evente ose porosi speciale.</p>
+          <ul class="contact-list">
+            <li><strong>Adresë:</strong> Rr. Shembull, Nr. 12, Prishtinë</li>
+            <li><strong>Email:</strong> info@gourmet-ks.com</li>
+            <li><strong>Telefon:</strong> +383 44 000 000</li>
+          </ul>
+          <div class="socials" aria-label="Rrjetet sociale">
+            <a href="#" aria-label="Instagram" class="social">Instagram</a>
+            <a href="#" aria-label="Facebook" class="social">Facebook</a>
+            <a href="#" aria-label="TikTok" class="social">TikTok</a>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            title="Harta Gourmet Prishtinë"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=21.14%2C42.65%2C21.18%2C42.67&layer=mapnik&marker=42.66%2C21.16"
+            style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Gourmet Prishtinë. Të gjitha të drejtat të rezervuara.</p>
+      <nav aria-label="Footer">
+        <a href="#about">Rreth</a>
+        <a href="#menu">Meny</a>
+        <a href="#reservations">Rezervime</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
