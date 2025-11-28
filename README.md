@@ -1,7 +1,7 @@
 # Gourmet - Simple Restaurant Website
 
-This is a simple, dark-themed static website for a restaurant in Prishtina, Kosovo.
-Made with HTML, CSS and plain JavaScript. No frameworks.
+This is a dark-themed static website for a restaurant in Prishtina, Kosovo.
+Made with HTML, CSS and plain JavaScript. 
 
 Quick notes
 - Open `index.html` in browser to view.
