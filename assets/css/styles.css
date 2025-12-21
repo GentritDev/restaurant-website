@@ -266,3 +266,21 @@ input:focus, textarea:focus{border-color:var(--color-primary); background:#24262
   .nav ul{flex-direction:column; padding:var(--sp-4)}
   .nav a{padding:var(--sp-3); font-size:var(--fs-base)}
 }
+/* Menu card hover effect */
+.menu-card {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.menu-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-elev);
+}
+
+/* Better focus outlines */
+.btn:focus-visible,
+.nav a:focus-visible,
+.filter-btn:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
