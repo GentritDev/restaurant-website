@@ -140,9 +140,36 @@
     existing.push({...formData, createdAt: new Date().toISOString()});
     localStorage.setItem('reservations', JSON.stringify(existing));
 
+   // Success overlay
+    const overlay = document.createElement('div');
+    overlay.id = 'successOverlay';
+    overlay.style.cssText = `
+      position:fixed; inset:0; background:rgba(0,0,0,0.92);
+      display:flex; align-items:center; justify-content:center;
+      z-index:9999; padding:2rem; text-align:center; color:white;
+      backdrop-filter:blur(12px);
+    `;
+    overlay.innerHTML = `
+      <div>
+        <h2 style="font-size:3rem; margin:0 0 1rem; font-family:var(--ff-serif)">Faleminderit!</h2>
+        <p style="font-size:1.4rem; max-width:500px; margin:0 auto 2rem">
+          Rezervimi juaj u regjistrua me sukses.<br>
+          Do t’ju kontaktojmë së shpejti për konfirmim.
+        </p>
+        <button id="closeSuccess" style="
+          padding:12px 32px; background:var(--color-primary); color:white;
+          border:none; border-radius:12px; font-size:1.1rem; cursor:pointer;
+        ">Mbyll</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    overlay.querySelector('#closeSuccess').addEventListener('click', () => {
+      overlay.remove();
+    });
+
     form.reset();
     setMinDate();
-    alert('Rezervimi u dërgua! Do të kontaktoheni për konfirmim.');
   });
 
   /* ------------------ Footer Year ------------------ */
