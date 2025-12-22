@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Menyja e plotë e restorantit Gourmet me filtrim sipas kategorive." />
+  <title>Menyja | Gourmet Restorant</title>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index. html" class="logo" aria-label="Faqja kryesore Gourmet">
+        <span class="logo-mark" aria-hidden="true">🍽️</span>
+        <span class="logo-text">Gourmet</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Hap menunë kryesore">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="nav" id="siteNav" aria-label="Navigim kryesor">
+        <ul>
+          <li><a href="index.html#home">Kreu</a></li>
+          <li><a href="index.html#about">Rreth</a></li>
+          <li><a href="menu.html" class="active">Meny</a></li>
+          <li><a href="index.html#reservations">Rezervime</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    <section id="menu" class="section menu" aria-labelledby="menu-title">
+      <div class="container">
+        <h1 id="menu-title">Menyja e Plotë</h1>
+        <p class="section-lead">Zbuloni pjatat tona të cilësuara.  Përdorni filtrat më poshtë për kërkimin. </p>
+
+        <!-- FILTRAT (filtrim dinamik përmes JavaScript - 71, 72, 77-80) -->
+        <div class="filters" role="tablist" aria-label="Filtrat e menysë">
+          <button class="filter-btn active" data-filter="gjitha" role="tab" aria-selected="true">Të gjitha</button>
+          <button class="filter-btn" data-filter="fillestar" role="tab">Fillestare</button>
+          <button class="filter-btn" data-filter="kryesor" role="tab">Kryesore</button>
+          <button class="filter-btn" data-filter="ëmbëlsira" role="tab">Ëmbëlsira</button>
+          <button class="filter-btn" data-filter="pije" role="tab">Pije</button>
+        </div>
+
+        <!-- MENU GRID (dinamike përmes JSON + fetch) -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Mbushet dinamikisht nga main.js (90, 88, 75) -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Gourmet Prishtinë.  Të gjitha të drejtat të rezervuara. </p>
+      <nav aria-label="Footer Links">
+        <a href="index.html">Kreu</a>
+        <a href="menu.html">Meny</a>
+        <a href="index.html#reservations">Rezervime</a>
+        <a href="contact. html">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

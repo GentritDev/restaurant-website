@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:  'Inter', 'Playfair Display', system-ui, -apple-system, sans-serif;
+  background:  linear-gradient(180deg, #0e0e10, #131317);
+  color: #f3f4f6;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.react-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+button {
+  transition: all 0.18s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+input, select {
+  font-size: 16px; /* Prevenet zoom në mobile */
+}

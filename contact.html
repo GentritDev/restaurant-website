@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kontakti i Gourmet - adresa, telefon, email dhe forma për të na shkruar." />
+  <title>Kontakt | Gourmet Restorant</title>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter: wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Faqja kryesore Gourmet">
+        <span class="logo-mark" aria-hidden="true">🍽️</span>
+        <span class="logo-text">Gourmet</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Hap menunë kryesore">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="nav" id="siteNav" aria-label="Navigim kryesor">
+        <ul>
+          <li><a href="index. html#home">Kreu</a></li>
+          <li><a href="index.html#about">Rreth</a></li>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="index.html#reservations">Rezervime</a></li>
+          <li><a href="contact.html" class="active">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="section contact" aria-labelledby="contact-title">
+      <div class="container grid-2">
+        <article>
+          <h1 id="contact-title">Kontakti</h1>
+          <p>Na kontakto për bashkëpunime, evente speciale, ose për pyetje të tjera.</p>
+
+          <!-- Lista e kontaktit (14) -->
+          <ul class="contact-list">
+            <li><strong>Adresë:</strong> Rr.  Shembull, Nr. 12, Prishtinë 10000, Kosovë</li>
+            <li><strong>Telefon (Rezervime):</strong> <a href="tel:+38344000000">+383 44 000 000</a></li>
+            <li><strong>Email:</strong> <a href="mailto:info@gourmet-ks.com">info@gourmet-ks.com</a></li>
+            <li><strong>Orari i punës:</strong> 10:00 - 23:00 çdo ditë</li>
+          </ul>
+
+          <!-- Rrjetet sociale (17) -->
+          <nav class="socials" aria-label="Rrjetet sociale të Gourmet">
+            <a href="https://instagram.com/gourmet" target="_blank" rel="noopener noreferrer" aria-label="Vizitoni Instagram-in tonë">Instagram</a>
+            <a href="https://facebook.com/gourmet" target="_blank" rel="noopener noreferrer" aria-label="Vizitoni Facebook-un tonë">Facebook</a>
+            <a href="https://tiktok.com/@gourmet" target="_blank" rel="noopener noreferrer" aria-label="Vizitoni TikTok-un tonë">TikTok</a>
+          </nav>
+        </article>
+
+        <!-- Forma e kontaktit (42-49) -->
+        <form id="contactForm" class="card form" action="#" method="post" novalidate aria-label="Formulari për të kontaktuar Gourmet">
+          <h2>Dërgoni një Mesazh</h2>
+
+          <div class="form-field">
+            <label for="contact-name">Emri *</label>
+            <input 
+              type="text" 
+              id="contact-name" 
+              name="name" 
+              required 
+              maxlength="50"
+              aria-required="true" />
+            <span class="error" data-for="contact-name"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-email">Email *</label>
+            <input 
+              type="email" 
+              id="contact-email" 
+              name="email" 
+              required 
+              aria-required="true" />
+            <span class="error" data-for="contact-email"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-subject">Tema</label>
+            <select id="contact-subject" name="subject">
+              <option value="">-- Zgjidhni --</option>
+              <option value="partnership">Bashkëpunim</option>
+              <option value="event">Event</option>
+              <option value="complaint">Ankesë</option>
+              <option value="other">Tjetër</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-message">Mesazhi *</label>
+            <textarea 
+              id="contact-message" 
+              name="message" 
+              rows="5" 
+              required 
+              aria-required="true"
+              placeholder="Shkruani mesazhin tuaj... "></textarea>
+            <span class="error" data-for="contact-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Dërgo Mesazhin</button>
+          <p class="form-footnote">Mesazhat nuk dërgohen në server (demo lokal).</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Harta (55) -->
+    <section class="section map-section">
+      <div class="container">
+        <h2>Gjeni Rrugën deri te Ne</h2>
+        <iframe 
+          title="Harta e Gourmet në Prishtinë"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=21.14,42.65,21.18,42.67&layer=mapnik&marker=42.66,21.16"
+          width="100%"
+          height="400"
+          loading="lazy"
+          style="border-radius: 12px; border: 1px solid #e5e7eb;"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Gourmet Prishtinë. Të gjitha të drejtat të rezervuara.</p>
+      <nav aria-label="Footer Links">
+        <a href="index.html">Kreu</a>
+        <a href="menu.html">Meny</a>
+        <a href="index.html#reservations">Rezervime</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
