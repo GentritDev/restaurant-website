@@ -1,16 +1,9 @@
-# Gourmet - Simple Restaurant Website
+# Gourmet - Modern Restaurant Website
 
-This is a dark-themed static website for a restaurant in Prishtina, Kosovo.
-Made with HTML, CSS and plain JavaScript. 
+This project is a high-end restaurant website for Gourmet, located in Prishtina. It was developed as a semester project for the Programming in WWW course at the University of Prishtina (FSHMN).
 
-Quick notes
-- Open `index.html` in browser to view.
-- Or run local server: `npx live-server` (recommended).
+# Project Purpose
+The goal of this project was to build a functional, responsive, and accessible web application that demonstrates proficiency in core web technologies and modern frontend frameworks.
 
-What is inside
-- `index.html` — main page
-- `assets/css/styles.css` — styles
-- `assets/js/main.js` — small JS (menu filter, mobile nav, form validation, footer year)
-- `assets/favicon.svg` — favicon
-- Images are placeholders (replace with your own images).
+LIVE DEMO : https://gourmet-prishtina.netlify.app/
 
