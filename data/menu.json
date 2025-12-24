@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Bruschetta me Domate",
+    "category": "fillestar",
+    "price": "5.50",
+    "description": "Bagetë e thekur me vaj ulliri ekstra të virgjër, domate qershi, borzilok dhe hudhër.",
+    "badge": "Vegjetariane",
+    "badgeClass": "badge-green"
+  },
+  {
+    "id": 2,
+    "title": "Risotto me Kërpudha",
+    "category": "kryesor",
+    "price": "10.90",
+    "description": "Oriz Arborio, kërpudha porçini të egra, parmixhan dhe tartuf i zi.",
+    "badge": "Pa Gluten",
+    "badgeClass": "badge-yellow"
+  },
+  {
+    "id": 3,
+    "title": "Fileto Viçi",
+    "category": "kryesor",
+    "price": "14.50",
+    "description": "Fileto e zgarës (250g) me salcë piper jeshil dhe pure patate me rozmarinë.",
+    "badge": "Chef's Choice",
+    "badgeClass": "badge-red"
+  },
+  {
+    "id": 4,
+    "title": "Tiramisu Klasik",
+    "category": "ëmbëlsira",
+    "price": "4.90",
+    "description": "Krem mascarpone, biskota savoiardi, espresso dhe kakao holandeze.",
+    "badge": null,
+    "badgeClass": null
+  },
+  {
+    "id": 5,
+    "title": "Smoothie Fruta Pylli",
+    "category": "pije",
+    "price": "3.50",
+    "description": "Boronica, manaferra, kos grek dhe mjaltë.",
+    "badge": "Bio",
+    "badgeClass": "badge-green"
+  },
+  {
+    "id": 6,
+    "title": "Sallatë Cezar",
+    "category": "fillestar",
+    "price": "7.00",
+    "description": "Sallatë jeshile, krutonë, fileto pule, parmixhan dhe salcë shtëpie.",
+    "badge": null,
+    "badgeClass": null
+  }
+]

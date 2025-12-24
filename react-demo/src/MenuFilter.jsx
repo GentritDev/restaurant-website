@@ -1,5 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
+// Minimal child component to demonstrate props usage
+const MenuItem = ({ item, isFavorite, onToggleFavorite }) => (
+  <div style={{ background: '#1f2024', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', padding:  '1rem' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+      <h3 style={{ margin: '0', color: '#f3f4f6', fontSize: '16px' }}>{item.title}</h3>
+      <span style={{ color: '#f0b429', fontWeight: '700' }}>€{item.price}</span>
+    </div>
+    <p style={{ margin: '0 0 0.5rem', color: '#b5bac3', fontSize: '13px' }}>{item.description}</p>
+    <button onClick={() => onToggleFavorite(item.id)} style={{ width: '100%', padding: '8px', background: isFavorite ? '#12b981' : '#202127', color: '#fff', border: `1px solid ${isFavorite ? '#12b981' : 'rgba(255,255,255,0.14)'}`, borderRadius: '4px', cursor: 'pointer', fontWeight: '600' }}>
+      {isFavorite ? '❤️ Në të preferuara' : '🤍 Shto'}
+    </button>
+  </div>
+);
+
 const MenuFilter = () => {
   const [filter, setFilter] = useState('gjitha');
   const [searchTerm, setSearchTerm] = useState('');
@@ -70,16 +84,12 @@ const MenuFilter = () => {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem' }}>
         {isLoading ? <p>⏳ Po ngarkohet...</p> : filteredItems.length > 0 ? (
           filteredItems.map(item => (
-            <div key={item.id} style={{ background: '#1f2024', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', padding:  '1rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                <h3 style={{ margin: '0', color: '#f3f4f6', fontSize: '16px' }}>{item.title}</h3>
-                <span style={{ color: '#f0b429', fontWeight: '700' }}>€{item.price}</span>
-              </div>
-              <p style={{ margin: '0 0 0.5rem', color: '#b5bac3', fontSize: '13px' }}>{item.description}</p>
-              <button onClick={() => handleAddFavorite(item.id)} style={{ width: '100%', padding: '8px', background: favorites.includes(item.id) ? '#12b981' : '#202127', color: '#fff', border: `1px solid ${favorites.includes(item.id) ? '#12b981' : 'rgba(255,255,255,0.14)'}`, borderRadius: '4px', cursor: 'pointer', fontWeight: '600' }}>
-                {favorites.includes(item.id) ? '❤️ Në të preferuara' : '🤍 Shto'}
-              </button>
-            </div>
+            <MenuItem
+              key={item.id}
+              item={item}
+              isFavorite={favorites.includes(item.id)}
+              onToggleFavorite={handleAddFavorite}
+            />
           ))
         ) : (
           <p>❌ Nuk u gjet asnjë artikull</p>

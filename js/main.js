@@ -1,6 +1,5 @@
 /*
-  
-  
+timeInput  
    67-92 (JS Fundamentals, DOM, Modern Features)
   
   Client-Server Model Explanation:
@@ -31,7 +30,7 @@ if (navToggle) {
 
 // Mbyll menunë kur klikon një link në mobile
 qsa('#siteNav a').forEach(link => {
-  link. addEventListener('click', () => {
+  link.addEventListener('click', () => {
     if (nav.classList.contains('open')) {
       nav.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
@@ -141,7 +140,7 @@ function validateReservationForm() {
   Object.entries(fields).forEach(([key, field]) => {
     const { el, required, minLength, isEmail, pattern, min } = field;
     
-    if (required && !el.value. trim()) {
+    if (required && !el.value.trim()) {
       getErrorElement(key).textContent = 'Kjo fushë është e detyrueshme. ';
       isValid = false;
     } else if (minLength && el.value.length < minLength) {
@@ -162,7 +161,7 @@ function validateReservationForm() {
   // Validim i orës
   const timeInput = qs('#time');
   if (timeInput && timeInput.value) {
-    const [hh, mm] = timeInput. value.split(':').map(Number);
+    const [hh, mm] = timeInput.value.split(':').map(Number);
     const minutes = hh * 60 + mm;
     if (minutes < 10 * 60 || minutes > 23 * 60) {
       getErrorElement('time').textContent = 'Orari:  10:00 - 23:00';
